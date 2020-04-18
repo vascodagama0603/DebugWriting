@@ -1,6 +1,10 @@
 import React,{Component} from 'react'
 import SideTitle from './SideTitle'
-
+const TESTA=()=>{
+    localStorage.setItem('myCat', 'Tom');
+    var cat = localStorage.getItem("myCat");
+    console.log(cat)
+  }
 class SideBar extends Component{
     constructor(props){
         super(props);
@@ -15,16 +19,7 @@ class SideBar extends Component{
     putEnter(e,props){
         if (e.keyCode == 13){
             
-            console.log('id ' +props.tid)
-          //this.state.titles.push(e.target.value)
-          /*
-          if (this.state.titles.length ==1){
-            this.state.title = [0]
-          }
-          else{
-            this.state.titles.splice(this.state.titles.length, 0, props.id);
-          }
-          */
+         console.log('id ' +props.tid)
          if (this.state.titles.indexs > 1 ){
             this.state.indexs.splice(this.state.indexs.indexOf(props.tid)+1, 0, this.state.titles.length);
             this.state.titles.splice(this.state.indexs.indexOf(props.tid), 0, e.target.value);
@@ -38,10 +33,6 @@ class SideBar extends Component{
           console.log('props.id ' +props.tid)
           console.log('this.state.titles ' +this.state.indexs)
           console.log('this.state.titles ' +this.state.titles)
-//          this.setState.titles.map(title,i => {
-//            title.id = i;
-//          })
-
           this.setState({titles:this.state.titles})
           localStorage.setItem(this.state.indexs, this.state.titles);
           console.log(localStorage)

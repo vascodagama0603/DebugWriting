@@ -3,6 +3,7 @@ import './css/App.css'
 import TodoList from './TodoList'
 import Sidebar from'./SideBar'
 import AxiosTest from './AxiosTest'
+//import SortableTEST from './SortableTEST'
 
 class App extends Component {
   constructor() {
@@ -11,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <AxiosTest/>
+        {/*<SortableTEST/>*/}
         <Sidebar/>
       {/*  <Mainbar/> */}
       </div>

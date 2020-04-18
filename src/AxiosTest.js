@@ -5,9 +5,12 @@ class AxiosTest extends Component {
     function handleGetLatAndLng(){
       const URL = 'http://localhost:3001/';
       axios
-        .get(URL)
+        .get(URL,{ 
+          firstName: '三郎',
+          lastName: '田中'
+        })
     }
-    return (
+  return   (
       <div>
         <input
           type="button"
